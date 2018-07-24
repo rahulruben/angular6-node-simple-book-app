@@ -1,0 +1,55 @@
+<div *ngIf="bookInfo" class="primary-container">
+    <h3>{{ bookInfo?.title }}</h3>
+    <br>
+    <div class="book-wrapper">
+        <div class="row">
+            <div class="col-sm-4">
+                <label>Author:</label>
+            </div>
+            <div class="col-sm-6">
+                {{ bookInfo?.author }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <label>Description:</label>
+            </div>
+            <div class="col-sm-6">
+                {{ bookInfo?.description }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <label>ISBN:</label>
+            </div>
+            <div class="col-sm-6">
+                {{ bookInfo?.isbn }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <label>Pages:</label>
+            </div>
+            <div class="col-sm-6">
+                {{ bookInfo?.pages }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <label>Published:</label>
+            </div>
+            <div class="col-sm-6">
+                {{ bookInfo?.published }}
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-3">
+                <button class="btn btn-primary button-size" (click)="addBookToCart()">{{ isAddedToCart ? 'Go To Cart' : 'Add To Cart' }}</button>
+            </div>
+            <div class="col-sm-3">
+                <button class="btn btn-primary button-size" (click)="closeCurrentSelection()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

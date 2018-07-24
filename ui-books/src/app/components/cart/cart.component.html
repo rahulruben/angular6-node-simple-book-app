@@ -1,0 +1,7 @@
+<div class="primary-wrapper">
+  <div *ngIf="books">
+    <app-cart-item *ngFor="let book of books" [book]="book"></app-cart-item>
+    <h2 *ngIf="books.length === 0">Your Cart is Empty</h2>
+    <button class="btn btn-primary button-size" (click)="goBack()">Go Back</button>
+  </div>
+</div>
